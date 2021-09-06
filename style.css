@@ -59,23 +59,107 @@ html.dark{
   display: none;
 }
 /*지금까지는 mainMenu.html 파일을 꾸며주는 CSS*/
+*{
+  margin: 0;
+  padding: 0;
+}
 .gameDiv{
-  position: relative;
-  width: 100%;
-  height: 100%;
-  margin: 100 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-image: url(https://blog.kakaocdn.net/dn/Q8LdP/btqDQtR1FXq/sKpRR7wfdYOb5PEJmIc9ek/img.jpg);
 }
-.game{
-  width: 400px;
-  height: 400px;
-  background-color: teal;
+.moveTime{
+  font-size: 3rem;
+  margin-top: 2rem;
+  color: blue;
 }
-.time{
-  color: white;
-  font-size: x-large;
+ul{
+  margin-top: 1rem;
+  list-style: none;
+  border: 2px solid black;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+li{
+  width: 100px;
+  height: 100px;
+  color: #fff;
+  background : url(https://placeimg.com/400/400/any);
+}
+.startButton{
+  background: #3b5998;
+  color: #fff;
+  border: none;
+  padding: 1rem 2rem;
+  margin-top: 1rem;
+}
+.gameText{
+  position: absolute;
+  color: greenyellow;
+  display: none;
+}
+.list_1{
+  background-position-x: 0px;
+  background-position-y: 0px;
+}
+.list_2{
+  background-position-x: -100px;
+  background-position-y: 0px;
+}
+.list_3{
+  background-position-x: -200px;
+  background-position-y: 0px;
+}
+.list_4{
+  background-position-x: -300px;
+  background-position-y: 0px;
+}
+.list_5{
+  background-position-x: 0px;
+  background-position-y: -100px;
+}
+.list_6{
+  background-position-x: -100px;
+  background-position-y: -100px;
+}
+.list_7{
+  background-position-x: -200px;
+  background-position-y: -100px;
+}
+.list_8{
+  background-position-x: -300px;
+  background-position-y: -100px;
+}
+.list_9{
+  background-position-x: 0px;
+  background-position-y: -200px;
+}
+.list_10{
+  background-position-x: -100px;
+  background-position-y: -200px;
+}
+.list_11{
+  background-position-x: -200px;
+  background-position-y: -200px;
+}
+.list_12{
+  background-position-x: -300px;
+  background-position-y: -200px;
+}
+.list_13{
+  background-position-x: 0px;
+  background-position-y: -300px;
+}
+.list_14{
+  background-position-x: -100px;
+  background-position-y: -300px;
+}
+.list_15{
+  background-position-x: -200px;
+  background-position-y: -300px;
+}
+.list_16{
+  background-position-x: -300px;
+  background-position-y: -300px;
 }
