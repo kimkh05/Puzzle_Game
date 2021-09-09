@@ -50,17 +50,29 @@ function shuffle(array){
 //events
 container.addEventListener('dragstart', e =>{
   const obj = e.target
-  draggd.el = obj;
+  dragged.el = obj;
   dragged.class = obj.className;
   dragged.index = [...obj.parentNode.children].indexOf(e.target);
 })
 container.addEventListener('dragover', e =>{
   e.preventDefault()
 })
-container.addEventListener('droop', e =>{
+container.addEventListener('drop', e =>{
   const obj = e.target;
+
   if(obj.className !== dragged.class){
+    let originPlace;
+    let isLast = false;
+
+    if(dragged.el.nextSibling){
+      originPlace = dragged.el.nextSibling
+    }
+    else {
+     originPlace = dragged.el.previousSibling
+     isLast = true;
+    }
     const droppedIndex = [...obj.parentNode.children].indexOf(obj);
-    dragged.index > droppedIndex ? obj.before(draggedf.el) : obj.after(dragged.el)
+    dragged.index > droppedIndex ? obj.before(dragged.el) : obj.after(dragged.el)
+    isLast ? originPlace.after(obj) : originPlace.before(obj);
   }
 })
